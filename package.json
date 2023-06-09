@@ -1,10 +1,12 @@
 {
   "name": "basilica-main",
   "version": "1.0.0",
-  "description": "",
+  "description": "basil recipes",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "browser-sync app -w ",
+    "sass": "sass  scss/styles.scss app/css/styles.css --watch --source-map",
+    "start": "concurrently \"npm run sass\" \"npm run server\" "
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,6 @@
     "browser-sync": "^2.29.3",
     "concurrently": "^8.1.0",
     "prettier": "^2.8.8",
-    "sass": "^1.62.1"
+    "sass": "^1.63.2"
   }
 }

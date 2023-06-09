@@ -1,0 +1,12 @@
+@import url(font/stylesheet.css);
+@import 'imports/variables';
+@import 'imports/base';
+@import 'imports/header';
+@import 'imports/nav';
+@import 'imports/content';
+
+.quote {
+  max-width: 340px;
+  height: 20px;
+  overflow: auto;
+}
