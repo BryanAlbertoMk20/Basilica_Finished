@@ -25,15 +25,16 @@ var recipeName = `${random(basilChefs)}'s ${random(basilTexture)} pesto`;
 el.innerHTML = recipeName;
 
 // ==
-var modal = document.querySelector('.modal');
-// var betaButton = document.querySelector('.beta');
+// var modal = document.querySelector('.modal')
+var modalOuter = document.querySelector('.modal-outer');
 
 function showPopover(event) {
-  console.log(event.target);
-  if (!event.target.matches('.beta')) return;
-  modal.classList.toggle('open');
+  if (event.target.matches('.beta')) {
+    modalOuter.classList.add('open');
+  } else if (event.target.matches('.closer, .modal-outer')) {
+    modalOuter.classList.remove('open');
+  } else return;
   event.preventDefault();
 }
 
-// betaButton.addEventListener('click', showPopover);
 document.addEventListener('click', showPopover);
