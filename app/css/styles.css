@@ -168,6 +168,11 @@ nav .nav-cookit a {
 nav .nav-cookit a:hover {
   background: linear-gradient(to bottom, #344e8b 1%, #6f89c7 100%);
 }
+nav .quote {
+  max-width: 340px;
+  height: 20px;
+  overflow: auto;
+}
 
 @media (min-width: 46.25em) {
   .content {
@@ -283,12 +288,6 @@ footer {
 
 .modal-outer.open .modal {
   transform: translateY(0);
-}
-
-.quote {
-  max-width: 340px;
-  height: 20px;
-  overflow: auto;
 }
 
 /*# sourceMappingURL=styles.css.map */
